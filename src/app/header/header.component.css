@@ -1,0 +1,56 @@
+.navbar-brand {
+    font-weight: bolder;
+    font-size: 1.7vw;
+    padding: 12px;
+    color: #2e643b;
+}
+
+.brand-bg {
+    background-color: #72ce8a;
+    border-radius: 15px 0px 15px 0px;
+}
+
+.navbar {
+    box-shadow: 0px 4px 15px #dddddd;
+    border-radius: 15px 0px 15px 0px;
+    border-bottom: 3px solid #72ce8a;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.nav-link {
+    font-size: 1.1vw;
+    margin: 0px 10px;
+    box-sizing: border-box !important;
+}
+
+.nav-link:hover {
+    color: #4ead67 !important;
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.form-control-search {
+    border-right: 0px;
+    border-radius: 0.75rem 0rem 0rem 0.75rem;
+}
+
+.btn-search {
+    border-radius: 0rem 0.75rem 0.75rem 0rem;
+}
+
+.search-bar {
+    display: flex;
+    padding-left: 2%;
+}
+
+.active {
+    color: #4ead67 !important;
+    font-weight: bold;
+}
