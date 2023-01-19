@@ -1,12 +1,49 @@
-<div class="card card-signup m-auto mt-5" style="width: 50rem;">
+<!-- Login Area -->
+<div *ngIf="showLoginPage" class="card common-card m-auto mt-5" style="width: 50rem;">
+    <img src="https://media.istockphoto.com/id/1185154743/vector/abstract-green-halftone-background.jpg?s=170667a&w=0&k=20&c=u3hTZKoM0XWuo1-SuQikvDBbR-MTYJ8qFK8ZyPLXrrM="
+        class="card-img-top" alt="login_img">
+    <div class="card-body">
+        <h4 class="signup-heading">Seller Login Form</h4>
+        <hr>
+        <p class="card-text">You can login using the form below</p>
+
+        <div *ngIf="authError" class="container text-center p-0">
+            <div class="alert alert-danger p-1" role="alert">
+                Wrong email or password. Login failed!
+            </div>
+        </div>
+
+        <form #sellerLoginForm="ngForm" (ngSubmit)="sellerLogin(sellerLoginForm.value)">
+            <div class="form-floating mb-3">
+                <input name="email" ngModel type="email" class="form-control common-form-control" id="floatingInput"
+                    placeholder="name@example.com">
+                <label class="form-label" for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input name="password" ngModel type="password" class="form-control" id="floatingPassword"
+                    placeholder="Password">
+                <label class="form-label" for="floatingPassword">Password</label>
+            </div>
+            <button type="submit" class="btn common-btn mt-4">Login</button>
+        </form>
+    </div>
+    <div class="container text-center">
+        <a (click)="openSignup()" class="nav-link anchors">Not have an account yet? Click here to register.</a>
+    </div>
+</div>
+
+<!-- Signup Area -->
+<div *ngIf="!showLoginPage" class="card common-card m-auto mt-5" style="width: 50rem;">
     <img src="https://media.istockphoto.com/id/1185154743/vector/abstract-green-halftone-background.jpg?s=170667a&w=0&k=20&c=u3hTZKoM0XWuo1-SuQikvDBbR-MTYJ8qFK8ZyPLXrrM="
         class="card-img-top" alt="login_img">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
+
     <div class="card-body">
-        <h4 class="signup-heading">Signup</h4>
+        <h4 class="signup-heading">Seller Signup Form</h4>
+        <hr>
         <p class="card-text">You can signup using the form below</p>
 
-        <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)">
+        <form #sellerSignUpForm="ngForm" (ngSubmit)="sellerSignUp(sellerSignUpForm.value)">
             <div class="form-floating mb-3">
                 <input name="userName" ngModel type="text" class="form-control" id="floatingName"
                     placeholder="e.g. Pawan">
@@ -22,9 +59,10 @@
                     placeholder="Password">
                 <label class="form-label" for="floatingPassword">Password</label>
             </div>
-            <div class="container text-center">
-                <button type="submit" class="btn btn-signup mt-4">Sign-up</button>
-            </div>
+            <button type="submit" class="btn common-btn mt-4">Signup</button>
         </form>
+    </div>
+    <div class="container text-center">
+        <a (click)="openLogin()" class="nav-link anchors">Already have an account? Click here to login.</a>
     </div>
 </div>

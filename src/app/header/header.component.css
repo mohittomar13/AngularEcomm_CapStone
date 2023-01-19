@@ -18,15 +18,7 @@
     background-color: #fff;
 }
 
-.nav-link {
-    font-size: 1.1vw;
-    margin: 0px 10px;
-    box-sizing: border-box !important;
-}
 
-.nav-link:hover {
-    color: #4ead67 !important;
-}
 
 
 input[type="search"]::-webkit-search-decoration,
@@ -53,4 +45,22 @@ input[type="search"]::-webkit-search-results-decoration {
 .active {
     color: #4ead67 !important;
     font-weight: bold;
+}
+
+.dropdown-menu{
+    border-radius: 15px;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+
+.seller-name {
+    background-color: rgb(255, 243, 182);
+    border-radius: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #72ce8a;
+    color: #fff;
 }
