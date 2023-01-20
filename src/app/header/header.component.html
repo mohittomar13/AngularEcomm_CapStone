@@ -2,8 +2,13 @@
     <div class="container-fluid">
 
 
-        <div class="brand-bg">
-            <a class="navbar-brand" routerLink="/">MediCare</a>
+        <div class="brand-container">
+            <div class="brand-bg">
+                <a class="navbar-brand" routerLink="/">MediCare</a>
+            </div>
+            <!-- <div class="plus-sign position-absolute top-0">
+                +
+            </div> -->
         </div>
 
 
@@ -53,10 +58,21 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLink="#">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a style="color: #4ead67" class="nav-link" routerLink="#"><i
-                                class="fa-solid fa-cart-shopping"></i>(0)</a>
-                    </li>
+
+                    <div class="position-relative ms-5">
+                        <li class="nav-item position-relative">
+                            <a style="color: #4ead67" class="nav-link" routerLink="#">
+                                <i class="position-absolute mt-2 start-0 fa-solid fa-cart-shopping"></i>
+                            </a>
+                            <span
+                                class="position-absolute top-0 mt-2 start-50 translate-middle badge rounded-pill bg-danger w-75">
+                                0
+                            </span>
+                        </li>
+                    </div>
+
+
+
                 </ul>
 
 
@@ -66,10 +82,10 @@
 
                 <ul *ngSwitchCase="'seller'" class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" routerLink="/">Home</a>
+                        <a class="nav-link active" routerLink="seller-home">Seller-Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="seller-home">Listings</a>
+                        <a class="nav-link" routerLink="seller-listing">Listings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" routerLink="seller-add-product">Add-Products</a>
@@ -80,7 +96,7 @@
                             {{sellerName | titlecase}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item logout" (click)="logout()">Logout</a></li>
+                            <li><a class="dropdown-item common-anchors" (click)="logout()">Logout</a></li>
                         </ul>
                     </li>
 

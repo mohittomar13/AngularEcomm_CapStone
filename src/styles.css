@@ -46,9 +46,12 @@
     border-radius: 0.75rem;
 }
 
+.form-control:hover {
+    box-shadow: 0px 0px 5px #bbb;
+    transition: box-shadow 0.2s ease-in-out;
+}
 
-
-.form-control:focus{
+.form-control:focus {
     border: 2px solid #4ead67;
     box-shadow: 0px 0px 5px #4ead67;
 }
@@ -62,7 +65,7 @@
 
 .common-btn:hover {
     box-shadow: 0px 0px 10px #198754;
-    color:white;
+    color: white;
 }
 
 .common-card {
@@ -72,4 +75,76 @@
 .card {
     font-size: 1.1vw;
     border-radius: 25px 0px 25px 0px;
+    transition-duration: 0.4s;
+    transition-property: box-shadow;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 25px #bbb;
+}
+
+
+/* Styling for the table */
+.table {
+    font-size: 1.1rem;
+}
+
+.edit {
+    color: #888;
+    text-align: center;
+}
+
+.delete {
+    color: #888;
+    text-align: center;
+}
+
+.edit:hover {
+    color: white;
+    background-color: darkcyan;
+}
+
+.delete:hover {
+    color:white;
+    background-color: #dc3545;
+}
+
+.alert-success {
+    color: #167e4e;
+    background-color: #96eda6;
+}
+
+thead {
+    background-color: #167e4e;
+    color: white;
+}
+
+th {
+    padding-top: 1.2vw !important;
+    padding-bottom: 1.2vw !important;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+tbody > tr > th{
+    vertical-align: middle !important;
+}
+
+.common-anchors:hover {
+    cursor: pointer;
+}
+
+.my-btn{
+    border-radius: 15px 0px 15px 0px;
+} 
+
+.table{
+    transition-duration: 0.2s;
+    transition-property: box-shadow;
+}
+
+.table:hover{
+    box-shadow: 0px 0px 15px #ddd;
 }

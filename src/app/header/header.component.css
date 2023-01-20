@@ -5,9 +5,42 @@
     color: #2e643b;
 }
 
+.brand-container {
+    width: 12vw;
+}
+
 .brand-bg {
-    background-color: #72ce8a;
+    /* background-color: #72ce8a; */
+    background-image: linear-gradient(to right, #72ce8a, #72ce8a);
     border-radius: 15px 0px 15px 0px;
+    width: 2.5vw;
+    transition-duration: 0.3s;
+    transition-property: background-image, border-radius, width;
+    transition-timing-function: ease-in-out;
+}
+
+.brand-bg:hover {
+    background-image: linear-gradient(to right, #72ce8a, #c5f65c);
+    border-radius: 0px 15px 0px 15px;
+    width: 9.4vw;
+}
+
+/* .brand-bg:hover+.plus-sign {
+    transform: rotate(90deg);
+} */
+
+/* .plus-sign {
+    display: inline;
+    font-size: 2em;
+    color: #dc3545;
+    font-weight: bold;
+    margin-left: 5em;
+    transition-duration: 0.3s;
+    transition-property: transform;
+} */
+
+.fa-cart-shopping {
+    z-index: 100;
 }
 
 .navbar {
@@ -17,9 +50,6 @@
     padding: 15px;
     background-color: #fff;
 }
-
-
-
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -31,6 +61,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-control-search {
     border-right: 0px;
     border-radius: 0.75rem 0rem 0rem 0.75rem;
+    font-size: 1.2rem;
 }
 
 .btn-search {
@@ -47,12 +78,8 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: bold;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     border-radius: 15px;
-}
-
-.logout:hover {
-    cursor: pointer;
 }
 
 .seller-name {

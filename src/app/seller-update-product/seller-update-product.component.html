@@ -1,0 +1,61 @@
+<!-- Signup Area -->
+<div class="card common-card m-auto mt-5" style="width: 50rem;">
+    <img src="https://img.freepik.com/premium-vector/healthcare-technology-concept-modern-abstract-background-with-medical-symbol-hexagon-pattern_236657-1688.jpg?w=2000"
+        class="card-img-top" alt="login_img">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+
+    <div class="card-body">
+        <div class="container text-center">
+            <h4 class="signup-heading">Update Medicine Info</h4>
+        </div>
+        <hr>
+        <p class="card-text">You can add update medicines using the form below</p>
+
+
+        <div class="container text-center p-0">
+            <div *ngIf="isUpdated" class="alert alert-success p-1" role="alert">
+                Medicine updated successfully!
+            </div>
+            <div *ngIf="isNotUpdated" class="alert alert-danger p-1" role="alert">
+                Error in updating medicine!
+            </div>
+        </div>
+
+
+
+        <form #updateProductForm="ngForm" (ngSubmit)="updateProduct(updateProductForm.value)">
+            <div class="mb-3">
+                <label class="form-label" for="floatingName">Medicine Name</label>
+                <input name="medicineName" ngModel="{{productData?.medicineName}}" type="text" class="form-control"
+                    id="floatingName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="floatingInput">Medicine Info</label>
+                <input name="info" ngModel="{{productData?.info}}" type="text" class="form-control" id="floatingInfo">
+            </div>
+            <div class="row">
+                <div class="col-10 mb-3">
+                    <label class="form-label" for="floatingInput">Image URL</label>
+                    <input name="imageUrl" ngModel="{{productData?.imageUrl}}" type="text" class="form-control"
+                        id="floatingImgUrl">
+                </div>
+                <div class="col">
+                    <img style="border:1px solid darkcyan" width=100 height=100 src="{{productData?.imageUrl}}" alt="">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="floatingPrice">Price ₹</label>
+                <input name="medicinePrice" ngModel="{{productData?.medicinePrice}}" type="text" class="form-control"
+                    id="floatingPrice">
+            </div>
+            <div class="mb-3">
+                <label for="medicineDescription" class="form-label">Description</label>
+                <textarea name="description" ngModel="{{productData?.description}}"
+                    class="form-control common-text-area" id="medicineDescription" rows="3"></textarea>
+            </div>
+            <div class="container text-center">
+                <button type="submit" class="btn common-btn mt-4">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

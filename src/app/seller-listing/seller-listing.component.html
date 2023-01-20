@@ -1,0 +1,48 @@
+<h3 class="mt-5 mb-5">Following are your listings.</h3>
+
+
+<div class="container text-center p-0">
+    <div *ngIf="isDeleted" class="alert alert-success p-1" role="alert">
+        Entry deleted successfully!
+    </div>
+    <div *ngIf="isNotDeleted" class="alert alert-danger p-1" role="alert">
+        Error in deleting entry!
+    </div>
+</div>
+
+<div class="container-fluid position-relative">
+    <table class="table table-hover">
+        <thead class="table-head">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Medicine Name</th>
+                <th scope="col">Info</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{item.medicineName}}</td>
+                <td>{{item.info}}</td>
+                <td><img src="{{item.imageUrl}}" width=50 height="50" alt="prod_img"></td>
+                <td>&#8377; {{item.medicinePrice}}/-</td>
+                <td>{{item.description}}</td>
+                <td>
+                    <div class="my-btn edit common-anchors p-2" routerLink="/seller-update-product/{{item.id}}">
+                        edit
+                    </div>
+                </td>
+                <td>
+                    <div class="my-btn delete common-anchors p-2" (click)="deleteProduct(item.id)">
+                        delete
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

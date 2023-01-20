@@ -6,12 +6,22 @@
 
     <div class="card-body">
         <div class="container text-center">
-            <h4 class="signup-heading">Add New Medicines Form</h4>
+            <h4 class="signup-heading">Add New Medicine</h4>
         </div>
         <hr>
         <p class="card-text">You can add new medicines using the form below</p>
 
-        <form #addProduct="ngForm" (ngSubmit)="addMedicine(addProduct.value)" >
+        <div class="container text-center p-0">
+            <div *ngIf="isAdded" class="alert alert-success p-1" role="alert">
+                Medicine added successfully!
+            </div>
+            <div *ngIf="isNotAdded" class="alert alert-danger p-1" role="alert">
+                Error in adding medicine!
+            </div>
+        </div>
+
+
+        <form #addProduct="ngForm" (ngSubmit)="addMedicine(addProduct.value)">
             <div class="form-floating mb-3">
                 <input name="medicineName" ngModel type="text" class="form-control" id="floatingName"
                     placeholder="e.g. Cipla MS42P">
@@ -34,7 +44,8 @@
             </div>
             <div class="mb-3">
                 <label for="medicineDescription" class="form-label ms-2">Description</label>
-                <textarea name="description" ngModel class="form-control common-text-area" id="medicineDescription" rows="3"></textarea>
+                <textarea name="description" ngModel class="form-control common-text-area" id="medicineDescription"
+                    rows="3"></textarea>
             </div>
             <div class="container text-center">
                 <button type="submit" class="btn common-btn mt-4">Add + </button>
