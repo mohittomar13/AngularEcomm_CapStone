@@ -28,4 +28,6 @@ export class SellerHomeComponent implements OnInit {
     let sellerData = sellerStore && JSON.parse(sellerStore)[0];
     this.sellerName = sellerData.userName;
   }
+
+  
 }

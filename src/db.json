@@ -75,27 +75,27 @@
   ],
   "products": [
     {
-      "medicineName": "Combiflam",
-      "info": "Pain reliever",
-      "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2021/5/UO/FJ/YS/22649526/combiflam-tablet-500x500.jpg",
+      "medicineName": "Vicks Action 500",
+      "info": "General Cold Medicine",
+      "imageUrl": "https://images.ctfassets.net/umpxkz97ty8t/5o9GGUAPQjeEw13xS2gPJ2/2bf50be4627f1e4edcfdfaf2383c4cb9/vicks-india-veer.jpg?w=800",
       "medicinePrice": "56.95",
-      "description": "Relieves all type of pain",
+      "description": "Best medicine for cold and cough.",
       "id": 1
     },
     {
-      "medicineName": "Vicks Action 500",
-      "info": "Cough and Cold",
-      "imageUrl": "https://5.imimg.com/data5/QN/EA/MY-57557331/vicks-action-500-tablet-500x500.jpg",
+      "medicineName": "Paracetamol",
+      "info": "Fever Medicine",
+      "imageUrl": "https://integratedlaboratories.in/wp-content/uploads/2022/08/Paracetamol-500mg-Tablets-Intemol-500-2.jpeg",
       "medicinePrice": "76.15",
-      "description": "Useful in cough and cold",
+      "description": "Best fever medicine for reducing fever.",
       "id": 2
     },
     {
-      "medicineName": "Revital",
-      "info": "Multi Vitamin",
-      "imageUrl": "https://m.media-amazon.com/images/I/81FAXKwKpgL._SL1500_.jpg",
-      "medicinePrice": "945.78",
-      "description": "Multivitamin and general healthcare tablets",
+      "medicineName": "Al-Shams",
+      "info": "Eye Drops",
+      "imageUrl": "https://m.media-amazon.com/images/I/61KhYSFTvaL._SX679_PIbundle-2,TopRight,0,0_AA679SH20_.jpg",
+      "medicinePrice": "9.55",
+      "description": "Eye drops for eye infection and normal eye ailments.",
       "id": 3
     },
     {

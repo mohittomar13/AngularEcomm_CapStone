@@ -48,7 +48,7 @@
     border-radius: 15px 0px 15px 0px;
     border-bottom: 3px solid #72ce8a;
     padding: 15px;
-    background-color: #fff;
+    background-color: rgb(254, 254, 254);
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -91,3 +91,4 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: #72ce8a;
     color: #fff;
 }
+
